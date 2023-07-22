@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="=addtocart.css">
+        <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+        <title>Add to mycart</title>
+        <style>
+            *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'poppins',sans-serif;
+    font-size: 18px;
+    
+}
+body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+.header{
+    height: 80px;
+    width:70%;
+    background-color: goldenrod;
+    border-radius: 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+.header .logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+.cart{
+    display: flex;
+    background-color:white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 3px;
+    width: 80px;
+
+}
+.fa-solid{
+    color: goldenrod;
+}
+.cart p{
+    height: 22px;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: goldenrod;
+    color: white;
+}
+.container{
+    display: flex;
+    width: 70%;
+    margin-bottom: 30px;
+}
+#root{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:20px;
+
+}
+.sidebar{
+    width: 40%;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+    margin:20px 0px;
+    padding:10px 0px;
+    border-top: 2px solid#3330;
+}
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <p class="logo">LOGO</p>
+            <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count"></p></div>
+        </div>
+        <div class="container">
+            <div id="root">
+                <div class="sidebar">
+                    <div class="head"><p>My Cart</p></div>
+                    <div class="cartItem">Your cart is empty</div>
+                    <div class="foot">
+                        <h3>Total</h3>
+                        <h2 id="total">$ 0.00</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="addtocart.js">
+        </script>
+    </body>
+</html>
